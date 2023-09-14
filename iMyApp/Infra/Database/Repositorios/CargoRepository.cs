@@ -1,7 +1,6 @@
 ﻿using Database.Conexoes;
 using Negocio.Entidades;
 using System.Data;
-using System.Data.Common;
 using System.Data.SqlClient;
 
 namespace Database.Repositorios
@@ -29,6 +28,7 @@ namespace Database.Repositorios
 
                 using (var connection = new SqlConnection(SqlServer.StrConexao()))
                 {
+                    connection.Open();
                     var cmd = new SqlCommand(sql, connection);
                     cmd.Parameters.AddWithValue("@nome", cargo.Nome);
                     cmd.Parameters.AddWithValue("@status", cargo.Status);
