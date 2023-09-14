@@ -1,14 +1,13 @@
-﻿using Microsoft.Extensions.Configuration;
-using System.Xml.Linq;
-
-namespace Database.Conexoes
+﻿namespace Database.Conexoes
 {
     internal static class SqlServer
     {
 
         internal static string StrConexao()
         {
-            return "Server=localhost;Database=iMyApp;User Id=sa;Password=sql2022;Trusted_Connection=False; TrustServerCertificate=True;";
+
+            return @"Data Source=localhost;Initial Catalog=iMyApp;User ID=sa;Password=sql2022";
+            //return "Server=localhost;Database=iMyApp;User Id=sa;Password=sql2022;Trusted_Connection=False; TrustServerCertificate=True;";
         }
     }
 }
