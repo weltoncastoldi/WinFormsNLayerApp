@@ -9,6 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Xml.Linq;
 
 namespace WindowsForms.Telas.Cargos
 {
@@ -29,12 +30,14 @@ namespace WindowsForms.Telas.Cargos
             var nome = txtCargo.Text;
             var status = chkStatus.Checked;
 
-            var novoCargo = new Cargo(nome,status);
+            var novoCargo = new Cargo(nome, status);
 
 
             var cargoRepository = new CargoRepository();
 
             var resultado = cargoRepository.Inserir(novoCargo);
+
+            gvCargos.DataSource = cargoRepository.ObterTodos();
 
             if (resultado)
             {
@@ -44,7 +47,28 @@ namespace WindowsForms.Telas.Cargos
             {
                 MessageBox.Show("Não foi possível cadastrar o cargo");
             }
-            
+
+        }
+
+        private void CargoView_Load(object sender, EventArgs e)
+        {
+            var cargoRepository = new CargoRepository();
+            var dataTable = cargoRepository.ObterTodos();
+            gvCargos.DataSource = dataTable;
+        }
+
+
+
+        private void gvCargos_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+
+            if (e.RowIndex >= 0)
+            {
+                groupBoxCargo.Show();
+                DataGridViewRow row = gvCargos.Rows[e.RowIndex];
+                txtCargo.Text = row.Cells[1].Value.ToString();
+                chkStatus.Checked = Convert.ToBoolean(row.Cells[2].Value.ToString());
+            }
         }
     }
 }

@@ -92,12 +92,12 @@ namespace Database.Repositorios
             }
         }
 
-        public DataTable ObterTodos(int cargoId)
+        public DataTable ObterTodos()
         {
 
             try
             {
-                var sql = @"";
+                var sql = @"SELECT * from cargo";
 
                 SqlDataAdapter dataAdapter = null;
                 var dataTable = new DataTable();

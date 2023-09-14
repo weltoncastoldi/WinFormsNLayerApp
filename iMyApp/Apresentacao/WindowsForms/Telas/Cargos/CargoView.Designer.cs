@@ -95,12 +95,16 @@
             // 
             // gvCargos
             // 
+            gvCargos.AllowUserToAddRows = false;
+            gvCargos.AllowUserToOrderColumns = true;
             gvCargos.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             gvCargos.Location = new Point(1, 160);
             gvCargos.Name = "gvCargos";
+            gvCargos.ReadOnly = true;
             gvCargos.RowTemplate.Height = 25;
             gvCargos.Size = new Size(798, 301);
             gvCargos.TabIndex = 4;
+            gvCargos.CellMouseClick += gvCargos_CellMouseClick;
             // 
             // label1
             // 
@@ -126,7 +130,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(799, 462);
             Controls.Add(btnRecarregar);
             Controls.Add(label1);
             Controls.Add(gvCargos);
@@ -134,6 +138,7 @@
             Controls.Add(groupBoxCargo);
             Name = "CargoView";
             Text = "CargoView";
+            Load += CargoView_Load;
             groupBoxCargo.ResumeLayout(false);
             groupBoxCargo.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)gvCargos).EndInit();
