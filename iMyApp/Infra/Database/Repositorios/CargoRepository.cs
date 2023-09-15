@@ -97,7 +97,7 @@ namespace Database.Repositorios
 
             try
             {
-                var sql = @"SELECT * from cargo";
+                var sql = @"SELECT Id, Nome, Status, CriadoEm, AlteradoEm from cargo";
 
                 SqlDataAdapter dataAdapter = null;
                 var dataTable = new DataTable();

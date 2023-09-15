@@ -61,14 +61,28 @@ namespace WindowsForms.Telas.Cargos
 
         private void gvCargos_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
         {
+            var cargoRepository = new CargoRepository();
+            DataGridViewRow row = gvCargos.Rows[e.RowIndex];
+
+            if (gvCargos.Columns[e.ColumnIndex].Name == "Delete")
+            {
+                if (MessageBox.Show("Deseja realmente deletar o registro?",
+                    "Message", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                {
+                    var resultado = cargoRepository.Deletar(int.Parse(row.Cells[1].Value.ToString()));
+                };
+                return;
+            }
 
             if (e.RowIndex >= 0)
             {
                 groupBoxCargo.Show();
-                DataGridViewRow row = gvCargos.Rows[e.RowIndex];
+               
                 txtCargo.Text = row.Cells[1].Value.ToString();
                 chkStatus.Checked = Convert.ToBoolean(row.Cells[2].Value.ToString());
             }
+
+
         }
     }
 }
