@@ -18,13 +18,7 @@ namespace WindowsForms
 
                 Application.EnableVisualStyles();
                 Application.SetCompatibleTextRenderingDefault(false);
-
-
-                SplashSreen frmSplash = new SplashSreen();
-                frmSplash.ShowDialog();
-
-                MDIPrincipal frmMDI = new MDIPrincipal();
-                Application.Run(frmMDI);
+                Application.Run(new MDIPrincipal());
             }
             catch (Exception ex)
             {

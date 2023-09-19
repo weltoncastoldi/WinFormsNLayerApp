@@ -1,14 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-
-namespace WindowsForms
+﻿namespace WindowsForms
 {
     public partial class MDIPrincipal : Form
     {
@@ -17,6 +7,12 @@ namespace WindowsForms
         public MDIPrincipal()
         {
             InitializeComponent();
+        }
+
+        private void MDIPrincipal_Shown(object sender, EventArgs e)
+        {
+            var loading = new SplashScreen();
+            loading.ShowDialog();
         }
 
         private void ShowNewForm(object sender, EventArgs e)
@@ -103,5 +99,12 @@ namespace WindowsForms
                 childForm.Close();
             }
         }
+
+        private void statusStrip_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+
+        }
+
+
     }
 }

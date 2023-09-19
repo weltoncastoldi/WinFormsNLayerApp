@@ -1,6 +1,6 @@
 ﻿namespace WindowsForms
 {
-    partial class SplashSreen
+    partial class SplashScreen
     {
         /// <summary>
         /// Required designer variable.
@@ -35,23 +35,23 @@
             // 
             // progressBar1
             // 
-            progressBar1.Location = new Point(230, 230);
+            progressBar1.Location = new Point(169, 235);
             progressBar1.Name = "progressBar1";
-            progressBar1.Size = new Size(141, 23);
+            progressBar1.Size = new Size(263, 23);
             progressBar1.TabIndex = 0;
             // 
-            // SplashSreen
+            // SplashScreen
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackgroundImage = Properties.Resources.fluent_custom_tint;
-            ClientSize = new Size(584, 261);
+            ClientSize = new Size(601, 401);
             Controls.Add(progressBar1);
             FormBorderStyle = FormBorderStyle.None;
-            Name = "SplashSreen";
+            Name = "SplashScreen";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "SplashSreen";
-            Load += SplashSreen_Load;
+            Shown += SplashScreen_Shown;
             ResumeLayout(false);
         }
 
