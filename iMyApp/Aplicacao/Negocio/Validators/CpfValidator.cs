@@ -1,13 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Negocio.Validators
+﻿namespace Negocio.Validators
 {
-    public class CpfValidator
+    public static partial class Validacoes
     {
-
+        public static bool ValidarCpf(string cpf)
+        {
+            // Implementação do método de validação do CPF
+            return false;
+        }
     }
 }

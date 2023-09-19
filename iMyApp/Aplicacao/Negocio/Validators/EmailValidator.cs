@@ -1,12 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Negocio.Validators
+﻿namespace Negocio.Validators
 {
-    internal class EmailValidator
+    public static partial class Validacoes
     {
+        public static bool ValidarEmail(string email)
+        {
+            // Implementação do método de validação do e-mail
+            return false;
+        }
     }
 }
