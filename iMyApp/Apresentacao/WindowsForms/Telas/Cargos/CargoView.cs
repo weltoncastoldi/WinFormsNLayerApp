@@ -20,6 +20,9 @@ namespace WindowsForms.Telas.Cargos
             InitializeComponent();
         }
 
+        /// <summary>
+        /// Exibe a GroupBox para cadastrar um cargo
+        /// </summary>  
         private void btnNovoCargo_Click(object sender, EventArgs e)
         {
             groupBoxCargo.Visible = !groupBoxCargo.Visible;
@@ -31,8 +34,7 @@ namespace WindowsForms.Telas.Cargos
             var status = chkStatus.Checked;
 
             var novoCargo = new Cargo(nome, status);
-
-
+            
             var cargoRepository = new CargoRepository();
 
             var resultado = cargoRepository.Inserir(novoCargo);

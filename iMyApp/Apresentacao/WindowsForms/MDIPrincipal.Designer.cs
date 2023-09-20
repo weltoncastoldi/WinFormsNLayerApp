@@ -467,7 +467,7 @@
             // statusStrip
             // 
             statusStrip.Items.AddRange(new ToolStripItem[] { toolStripStatusLabel });
-            statusStrip.Location = new Point(0, 501);
+            statusStrip.Location = new Point(0, 362);
             statusStrip.Name = "statusStrip";
             statusStrip.Padding = new Padding(1, 0, 16, 0);
             statusStrip.RenderMode = ToolStripRenderMode.Professional;
@@ -486,7 +486,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(737, 523);
+            ClientSize = new Size(737, 384);
             Controls.Add(statusStrip);
             Controls.Add(toolStrip);
             Controls.Add(menuStrip);
@@ -496,6 +496,7 @@
             Name = "MDIPrincipal";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "MDIParent1";
+            WindowState = FormWindowState.Maximized;
             Shown += MDIPrincipal_Shown;
             menuStrip.ResumeLayout(false);
             menuStrip.PerformLayout();
