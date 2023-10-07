@@ -10,7 +10,7 @@ namespace WindowsForms.Telas.Cargos
         public CargoView(ICargoRepository cargoRepository)
         {
             InitializeComponent();
-            _cargoRepository = cargoRepository;''
+            _cargoRepository = cargoRepository;
         }
 
         /// <summary>
@@ -48,8 +48,6 @@ namespace WindowsForms.Telas.Cargos
             var dataTable = _cargoRepository.ObterTodos();
             gvCargos.DataSource = dataTable;
         }
-
-
 
         private void gvCargos_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
         {

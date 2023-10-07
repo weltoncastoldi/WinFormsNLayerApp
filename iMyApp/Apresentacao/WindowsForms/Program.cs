@@ -1,4 +1,5 @@
 using System.ComponentModel.DataAnnotations;
+using WindowsForms.telas.fornecedores;
 using WindowsForms.Telas.Cargos;
 
 namespace WindowsForms
@@ -19,7 +20,7 @@ namespace WindowsForms
 
                 Application.EnableVisualStyles();
                 Application.SetCompatibleTextRenderingDefault(false);
-                Application.Run(new MDIPrincipal());
+                Application.Run(new FornecedorView());
             }
             catch (Exception ex)
             {
