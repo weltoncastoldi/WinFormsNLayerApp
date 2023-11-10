@@ -1,5 +1,4 @@
-﻿using Negocio.Comum;
-using Negocio.Entidades;
+﻿using Negocio.Entidades;
 
 namespace WindowsForms.telas.clientes
 {
