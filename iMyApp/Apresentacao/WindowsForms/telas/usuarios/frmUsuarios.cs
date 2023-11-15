@@ -22,7 +22,7 @@ namespace WindowsForms.telas.usuarios
         {
 
             var emailService = new EmailService(txtFrom.Text, txtTo.Text, txtSubject.Text, txtMessage.Text);
-            emailService.EnviarEmail();
+            emailService.EmailRecuperarSenha("weltoncastoldi@hotmail.com");
         }
     }
 }
